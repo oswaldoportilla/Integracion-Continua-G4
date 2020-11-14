@@ -1,0 +1,200 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /**Reset para REMS - 62.5% = 10px de 16 px**/
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/**Cambiando la fuente ene l body**/
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    /** 1.6rem = 16px**/
+    line-height: 2;
+}
+
+
+/**Globales**/
+
+img {
+    max-width: 100%;
+    /*hace que todas las imagenes sean al % estipulado*/
+}
+
+.contenedor {
+    width: 95%;
+    /**PARA RESPONSIVE*/
+    max-width: 120rem;
+    /** "1200px = 120rem" Dice que tome todo el espacio disponible pero que no se pase de 1200px **/
+    margin: 0 auto 0 auto;
+    /** margin es muy utilizado y trabaja como un reloj 0= ↑, auto= → , 0= ↓ , auto = ← **/
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6;
+}
+
+
+/**Utilidades**/
+
+.d-block {
+    display: block !important;
+}
+
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+
+/**Botones**/
+
+.boton {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.boton:hover {
+    /**Hace que el cursor cambie cuando lo pasamos con algun enlace o boton**/
+    cursor: pointer;
+    /**Hace que el cursor cambie cuando lo pasamos con algun enlace o boton**/
+}
+
+.boton-amarillo {
+    background-color: #E08709;
+}
+
+.boton-verde {
+    background-color: #71B100;
+}
+
+
+/** Header**/
+
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.sitio {
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    /**posiciona la imagen centrada**/
+    background-size: cover;
+    /**forza que tome todo el espacio tanto en altua como en ancho pero guardando las proporciones**/
+    height: 100vh;
+    /**adapta la imagen a la pantalla automaticamente**/
+    min-height: 60rem;
+    /** "600px = 600px" define la propiedad minima que va a tener la pantalla **/
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
+}
+
+.contenido-header h1 {
+    color: #ffffff;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 3.5rem;
+}
+
+.barra {
+    padding-top: 3rem;
+    /**30px = 3rem**/
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/**Navegacion **/
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    /** le quita el subrayado a los enlaces **/
+    font-size: 2.2rem;
+    /** Tamaño de la letra**/
+    /**20px = 2rem**/
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        /**le quita el magen al ulyimo elemento en este caso "Contacto"**/
+        margin: 0;
+    }
+}
+
+.navegacion a:hover {
+    /** Cambia de color cuando pasamos el mouse por la navegacion **/
+    color: #71B100;
+}
